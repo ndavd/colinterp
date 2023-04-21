@@ -1,3 +1,5 @@
+#![allow(dead_code)]
+
 use colored::*;
 
 #[derive(Debug)]
@@ -19,9 +21,10 @@ impl std::fmt::Display for HexColor {
             f,
             "{}",
             self.get_hex()
+                .to_uppercase()
+                .bold()
                 .on_color(self.to_true_color())
                 .color(fg)
-                .bold()
         )
     }
 }
@@ -69,9 +72,9 @@ impl HexColor {
     pub fn get_palette(color_a: Self, color_b: Self, n: usize) -> Vec<Self> {
         let mut palette: Vec<Self> = vec![];
 
-        let jump_r = (color_b.r - color_a.r) as f32 / (n as f32 - 1.0);
-        let jump_g = (color_b.g - color_a.g) as f32 / (n as f32 - 1.0);
-        let jump_b = (color_b.b - color_a.b) as f32 / (n as f32 - 1.0);
+        let jump_r = (color_b.r as i16 - color_a.r as i16) as f32 / (n as f32 - 1.0);
+        let jump_g = (color_b.g as i16 - color_a.g as i16) as f32 / (n as f32 - 1.0);
+        let jump_b = (color_b.b as i16 - color_a.b as i16) as f32 / (n as f32 - 1.0);
 
         let mut curr_r = color_a.r as f32;
         let mut curr_g = color_a.g as f32;

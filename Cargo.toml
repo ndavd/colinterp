@@ -1,8 +1,15 @@
 [package]
 name = "colinterp"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 authors = ["Nuno David <email@ndavd.com>"]
+license = "MIT"
+description = "A Rust CLI that linearly interpolates 2 colors to generate a palette."
+readme = ".github/README.md"
+homepage = "https://github.com/ndavd/colinterp"
+repository = "https://github.com/ndavd/colinterp"
+keywords = ["cli", "colors", "palette"]
+categories = ["command-line-utilities"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
