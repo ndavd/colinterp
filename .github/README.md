@@ -13,8 +13,9 @@
 
 ## Web
 
-A web version of this CLI is available using Web Assembly (WASM). You can try it
-at: https://colinterp.vercel.app/
+A web version of this CLI is available using Web Assembly (WASM). https://github.com/ndavd/colinterp-web
+
+You can try it at: https://colinterp.vercel.app
 
 ## CLI
 
